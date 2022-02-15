@@ -338,6 +338,7 @@ body {
 .connect-wallet-popup > h2 {
   font-size: 24px;
   padding: 16px;
+  color: white;
 }
 .connect-wallet-popup > p {
   padding: 16px;
@@ -425,7 +426,7 @@ body {
   text-align: center;
   background-image: url("/images/shared/img/bg.png");
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
 @media only screen and (max-width: 719px) {
   .home-view {
@@ -438,6 +439,7 @@ body {
 }
 @media only screen and (max-width: 719px) {
   .home-view > header > nav {
+    padding: 0px;
     margin-top: 14px;
     margin-left: 7px;
     margin-bottom: 60px;

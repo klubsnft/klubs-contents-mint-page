@@ -82,7 +82,8 @@ export default class Home implements View {
             this.walletAddress.empty().appendText(CommonUtil.shortenAddress(address));
 
             const balance = await Klaytn.balanceOf(address);
-            this.klayBalance.empty().appendText(utils.formatEther(balance!));
+            const remainder = balance.mod(1e14);
+            this.klayBalance.empty().appendText(utils.formatEther(balance.sub(remainder)));
         }
     }
 
