@@ -38,8 +38,7 @@
         padding-bottom : 16px;
 
         >.menu {
-            max-width      : 300px;
-            width          : 100%;
+            width          : 300px;
             display        : flex;
             justify-content: space-between;
             font-family    : Helvetica53-Extended;
@@ -50,14 +49,17 @@
             margin-bottom  : 20px;
 
             >.item {
+                font-family    : Helvetica53-Extended;
                 color          : #FFF200;
                 text-decoration: none;
             }
+
+            @media @phone {}
         }
 
         >.logo {
-            max-width : 300px;
-            max-height: 300px;
+            width : 300px;
+            height: 300px;
         }
 
         >h1 {
@@ -184,6 +186,7 @@
                         width     : 100%;
                         background: #FFF200;
                         padding   : 7px 14px;
+                        border    : none;
 
                         @media @phone {
                             font-size: 14px;
@@ -219,10 +222,10 @@
                         margin-left   : 156px;
 
                         @media @phone {
-                            margin-left   : 0px;
-                            font-size     : 4px;
-                            line-height   : 5px;
-                            letter-spacing: 0.03em;
+                            margin-left  : 0px;
+                            font-size    : 14px;
+                            line-height  : 5px;
+                            margin-bottom: 32px;
                         }
                     }
 
@@ -237,7 +240,7 @@
                         text-align     : center;
                         letter-spacing : 0.03em;
                         color          : #FFF200;
-                        text-shadow    : 0px 0.460795px 0.460795px rgba(0, 0, 0, 0.25);
+                        text-shadow    : 0px 1px 1px rgba(0, 0, 0, 0.25);
                         padding-right  : 16px;
 
                         @media @phone {

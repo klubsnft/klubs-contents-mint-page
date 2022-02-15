@@ -34,7 +34,7 @@ export default class Home implements View {
                         el("a.item", "Opensea", { href: "", target: "_blank" }),
                         el("a.item", "Officiel PFP Site", { href: "", target: "_blank" }),
                     ),
-                    el("img.logo", { src: "/images/shared/logo/babyping.svg" }),
+                    el("img.logo", { src: "/images/shared/logo/babyping.png" }),
                     el("h1", "You can mint your own < Babyping > below\nGet your own NFT from and "),
                     el("h2", "ENJOY!"),
                     el("hr"),
