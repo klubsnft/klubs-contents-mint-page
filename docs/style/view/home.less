@@ -1,0 +1,248 @@
+.home-view {
+    display         : flex;
+    flex-direction  : column;
+    justify-content : center;
+    text-align      : center;
+    background-image: url("/images/shared/img/bg.png");
+    width           : 100%;
+    height          : 100vh;
+
+    @media @phone {
+        padding: 16px;
+    }
+
+    >header {
+        >nav {
+            display: flex;
+            padding: 16px;
+
+            @media @phone {
+                margin-top   : 14px;
+                margin-left  : 7px;
+                margin-bottom: 60px;
+            }
+        }
+    }
+
+    >article {
+        display        : flex;
+        flex-direction : column;
+        align-items    : center;
+        justify-content: center;
+        text-align     : center;
+        max-width      : 896px;
+        margin         : auto;
+
+        >.menu {
+            max-width      : 300px;
+            width          : 100%;
+            display        : flex;
+            justify-content: space-between;
+            font-family    : Helvetica53-Extended;
+            font-size      : 15.4179px;
+            line-height    : 8px;
+            color          : #FFF200;
+            text-shadow    : 0px 0.489228px 0.489228px rgba(0, 0, 0, 0.25);
+            margin-bottom  : 20px;
+
+            >.item {
+                color          : #FFF200;
+                text-decoration: none;
+            }
+        }
+
+        >.logo {
+            max-width : 300px;
+            max-height: 300px;
+        }
+
+        >h1 {
+            font-family   : Arthead FREE;
+            margin-top    : 44px;
+            font-size     : 26.7044px;
+            line-height   : 26px;
+            text-align    : center;
+            letter-spacing: 0.03em;
+            color         : #FFF200;
+            text-shadow   : 0px 0.659369px 0.659369px rgba(0, 0, 0, 0.25);
+        }
+
+        >h2 {
+            font-family   : Arthead FREE;
+            margin-top    : 30px;
+            font-size     : 58.5544px;
+            line-height   : 56px;
+            text-align    : center;
+            letter-spacing: 0.03em;
+            color         : #FFFFFF;
+            text-shadow   : 0px 0.659369px 0.659369px rgba(0, 0, 0, 0.25);
+
+            @media @phone {
+                margin-bottom: 24px;
+            }
+        }
+
+        >hr {
+            width        : 100%;
+            border       : 1px solid #FFFFFF;
+            margin-top   : 48px;
+            margin-bottom: 48px;
+
+            @media @phone {
+                margin-top   : 24px;
+                margin-bottom: 24px;
+            }
+        }
+
+        >.price-container {
+
+            >article {
+                display   : flex;
+                margin-top: 16px;
+
+                >header {
+                    font-family: Helvetica53-Extended;
+                    font-size  : 20px;
+                    line-height: 10px;
+                    color      : #FFF200;
+                    text-shadow: 0px 0.634625px 0.634625px rgba(0, 0, 0, 0.25);
+                }
+
+                >p {
+                    font-family: Helvetica53-Extended;
+                    margin-left: 16px;
+                    font-size  : 20px;
+                    line-height: 10px;
+                    color      : #FFFFFF;
+                    text-shadow: 0px 0.634625px 0.634625px rgba(0, 0, 0, 0.25);
+                }
+
+                @media @phone {
+                    padding-bottom: 16px;
+                }
+            }
+        }
+
+        >.mint-container {
+            display: flex;
+            width  : 100%;
+
+            @media @phone {
+                flex-direction: column;
+                margin-top    : 24px;
+            }
+
+            >section {
+                width: 100%;
+
+                >article {
+                    margin-bottom: 20px;
+                    display      : flex;
+                    align-items  : center;
+                    text-align   : left;
+                    margin-right : 16px;
+                    font-family  : Helvetica-CondensedBlack;
+
+                    @media @phone {
+                        margin-right  : 0;
+                        flex-direction: column;
+                        align-items   : flex-start;
+                    }
+
+                    >header {
+                        max-width   : 140px;
+                        width       : 100%;
+                        font-weight : 900;
+                        font-size   : 20px;
+                        line-height : 11px;
+                        margin-right: 16px;
+                        color       : #FFFFFF;
+                        text-shadow : 0px 0.634625px 0.634625px rgba(0, 0, 0, 0.25);
+
+                        @media @phone {
+                            margin-bottom: 8px;
+                        }
+                    }
+
+                    >p {
+                        height    : 20px;
+                        width     : 100%;
+                        background: #FFF200;
+                        padding   : 5px 14px;
+
+                        @media @phone {
+                            font-size: 14px;
+                        }
+                    }
+
+                    >input {
+                        height    : 20px;
+                        width     : 100%;
+                        background: #FFF200;
+                        padding   : 5px 14px;
+
+                        @media @phone {
+                            font-size: 14px;
+                        }
+                    }
+
+                    >progress {
+                        height          : 20px;
+                        width           : 100%;
+                        border-color    : #FFF200;
+                        background-color: black;
+                    }
+
+                    @media @phone {
+                        text-align    : left;
+                        flex-direction: column;
+                    }
+                }
+
+                >p {
+                    display        : flex;
+                    justify-content: flex-end;
+                    margin-top     : 14px;
+                    font-family    : Arthead FREE;
+                    font-style     : normal;
+                    font-weight    : normal;
+                    font-size      : 18.6622px;
+                    line-height    : 18px;
+                    text-align     : center;
+                    letter-spacing : 0.03em;
+                    color          : #FFF200;
+                    text-shadow    : 0px 0.460795px 0.460795px rgba(0, 0, 0, 0.25);
+
+                    @media @phone {
+                        font-size    : 14px;
+                        line-height  : 5px;
+                        margin-bottom: 32px;
+                    }
+                }
+            }
+
+            >.button-wrap {
+                >button {
+                    font-weight     : 900;
+                    font-size       : 25.7023px;
+                    line-height     : 14px;
+                    color           : #FFF200;
+                    text-shadow     : 0px 0.634625px 0.634625px rgba(0, 0, 0, 0.25);
+                    border          : 1px solid #FFF200;
+                    box-sizing      : border-box;
+                    background-color: transparent;
+                    padding         : 0px 16px;
+                    height          : 104px;
+                    font-family     : Helvetica-CondensedBlack;
+
+                    @media @phone {
+                        align-items: center;
+                        width      : 25%;
+                        height     : 100px;
+                        padding    : 6px 15px;
+                    }
+                }
+            }
+        }
+    }
+}
