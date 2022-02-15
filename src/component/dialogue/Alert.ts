@@ -20,6 +20,7 @@ export default class Alert extends Popup {
                         click: () => this.delete(),
                     }),
                 ),
+                el("img", { src: "images/shared/logo/klubs_none_text.svg" }),
             ),
         );
     }

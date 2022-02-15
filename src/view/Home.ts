@@ -4,6 +4,7 @@ import { utils } from "ethers";
 import CommonUtil from "../CommonUtil";
 import Klaytn from "../klaytn/Klaytn";
 import Wallet from "../klaytn/Wallet";
+import Alert from "../component/dialogue/Alert";
 
 export default class Home implements View {
 
@@ -65,7 +66,11 @@ export default class Home implements View {
                             el("p", "10000 / 10000 NFT"),
                         ),
                         el(".button-wrap",
-                            el("button", "Mint")
+                            el("button", "Mint", {
+                                click: async () => {
+                                    new Alert("Wait!\nIt's not today.", "민팅 시작일 까지 기다려 주세요 :)");
+                                },
+                            }),
                         ),
                     ),
                 ),

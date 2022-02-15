@@ -179,7 +179,7 @@ input {
 }
 @font-face {
   font-family: "NanumBarunpen";
-  src: url("../fonts/NanumBarunpenR") format("woff");
+  src: url("../fonts/NanumBarunpenR.woff") format("woff");
 }
 body {
   background: black;
@@ -200,24 +200,37 @@ body {
   padding: 20px 0;
 }
 .dialogue.alert {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  max-width: 600px;
-  width: 90%;
+  width: 500px;
+  height: 500px;
   margin: auto;
-  border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.9);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 50px;
+  background: #FFF200;
 }
 .dialogue.alert > h2 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  padding: 16px;
+  font-family: Arthead FREE;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 73.5045px;
+  line-height: 71px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #000000;
+  margin-bottom: 16px;
 }
 .dialogue.alert > p {
-  padding-left: 16px;
-  padding-top: 8px;
-  font-size: 0.875rem;
-  line-height: 1.2em;
+  font-family: NanumBarunpen;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #000000;
 }
 .dialogue.alert > .button-container {
   display: flex;
