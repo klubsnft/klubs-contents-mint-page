@@ -35,6 +35,7 @@
         max-width      : 896px;
         margin         : auto;
         width          : 100%;
+        padding-bottom : 16px;
 
         >.menu {
             max-width      : 300px;
@@ -168,10 +169,11 @@
                     }
 
                     >p {
-                        height    : 20px;
-                        width     : 100%;
-                        background: #FFF200;
-                        padding   : 5px 14px;
+                        display    : flex;
+                        align-items: center;
+                        width      : 100%;
+                        background : #FFF200;
+                        padding    : 7px 14px;
 
                         @media @phone {
                             font-size: 14px;
@@ -179,10 +181,9 @@
                     }
 
                     >input {
-                        height    : 20px;
                         width     : 100%;
                         background: #FFF200;
-                        padding   : 5px 14px;
+                        padding   : 7px 14px;
 
                         @media @phone {
                             font-size: 14px;
@@ -190,7 +191,7 @@
                     }
 
                     >progress {
-                        height          : 20px;
+                        min-height      : 29px;
                         width           : 100%;
                         border-color    : #FFF200;
                         background-color: black;
@@ -259,7 +260,7 @@
                     box-sizing      : border-box;
                     background-color: transparent;
                     padding         : 0px 16px;
-                    height          : 104px;
+                    min-height      : 128px;
                     font-family     : Helvetica-CondensedBlack;
 
                     @media @phone {
