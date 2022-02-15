@@ -63,7 +63,10 @@ export default class Home implements View {
                                 el("header", "Mint Progress"),
                                 el("progress"),
                             ),
-                            el("p", "10000 / 10000 NFT"),
+                            el(".caption-container",
+                                el(".caption", "* 1트랜젝션당 10개까지 민팅이 가능합니다."),
+                                el("p", "10000 / 10000 NFT"),
+                            ),
                         ),
                         el(".button-wrap",
                             el("button", "Mint", {
