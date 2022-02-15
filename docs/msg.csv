@@ -1,10 +1,10 @@
 key,ko,en
-KLIP_POPUP_TITLE,QR 코드로 Klip 접속,Connect Klip via QR code
+KLIP_POPUP_TITLE,Scan the QR,Scan the QR
 KLIP_POPUP_DESC1,QR 코드 리더기 또는 카카오톡 앱을 통해 QR 코드를 스캔해주세요.,Please scan the QR code through a QR Code Reader or Kakao Talk Application
 KLIP_POPUP_DESC2,카카오톡 실행 ▶ 상단 검색창 클릭 ▶ 코드 스캔 후 로그인,Run Kakao Talk Application ▶ Click the search bar on the top ▶ Scan the code to log in
 KLIP_POPUP_DESC3,* Klip > 코드스캔 (사이드메뉴)에서도 스캔이 가능합니다.,"* You can also scan the at ""Code Scan"" from side menu of Klip"
-CONNECT_WALLET_TITLE,지갑 연결,Connect Wallet
-CONNECT_WALLET_DESC,클럽스 민팅은 클레이튼 블록체인과의 연결이 필요합니다. 카이카스 혹은 카카오톡 클립에서 연결해주시기 바랍니다.,Gaia Protocol needs a connection with the Klayton blockchain. Please connect from Kaikas or Kakao Talk Klip.
+CONNECT_WALLET_TITLE,Connect to my Wallet,Connect to my Wallet
+CONNECT_WALLET_DESC,클럽스 민팅은 클레이튼 블록체인과 연결이 필요합니다.\n카이카스 혹은 카카오톡 클립에서 연결해주세요 :) ,Gaia Protocol needs a connection with the Klayton blockchain. Please connect from Kaikas or Kakao Talk Klip.
 CONNECT_WALLET_BUTTON1,카이카스 설치,Install Kaikas
-CONNECT_WALLET_BUTTON2,카카오톡 클립으로 연결,Connect with Kakao Talk Klip
+CONNECT_WALLET_BUTTON2,클립으로 연결,Connect with Kakao Talk Klip
 CONNECT_WALLET_BUTTON3,연결하지 않고 둘러보기,Explore without Wallet Connection

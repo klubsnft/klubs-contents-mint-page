@@ -10,7 +10,9 @@ export default class KlipQRPopup extends Popup {
         this.append(
             this.content = el(".klip-qr-popup",
                 el("h2", msg("KLIP_POPUP_TITLE")),
+                el("hr"),
                 el(".qr", el("img", { src: dataURL })),
+                el("hr"),
                 el("p", msg("KLIP_POPUP_DESC1")),
                 el("p", msg("KLIP_POPUP_DESC2")),
                 el("p", msg("KLIP_POPUP_DESC3")),

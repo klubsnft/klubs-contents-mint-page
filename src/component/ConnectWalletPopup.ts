@@ -11,6 +11,7 @@ export default class ConnectWalletPopup extends Popup {
         this.append(
             this.content = el(".connect-wallet-popup",
                 el("h2", msg("CONNECT_WALLET_TITLE")),
+                el("hr"),
                 el("p", msg("CONNECT_WALLET_DESC")),
                 el(".button-container",
                     el("a.connect-kaikas-button",
