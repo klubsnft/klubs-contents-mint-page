@@ -517,7 +517,6 @@ body {
   font-size: 15.4179px;
   line-height: 8px;
   color: #FFF200;
-  text-shadow: 0px 0.489228px 0.489228px rgba(0, 0, 0, 0.25);
   margin-bottom: 20px;
 }
 .home-view > article > .menu > .item {
@@ -537,7 +536,7 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: #FFF200;
-  text-shadow: 0px 0.659369px 0.659369px rgba(0, 0, 0, 0.25);
+  font-weight: 700;
 }
 .home-view > article > h2 {
   font-family: Arthead FREE;
@@ -547,7 +546,6 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: #FFFFFF;
-  text-shadow: 0px 0.659369px 0.659369px rgba(0, 0, 0, 0.25);
 }
 @media only screen and (max-width: 719px) {
   .home-view > article > h2 {
@@ -566,6 +564,9 @@ body {
     margin-bottom: 24px;
   }
 }
+.home-view > article > .price-container {
+  width: 100%;
+}
 .home-view > article > .price-container > article {
   display: flex;
   margin-top: 1.6rem;
@@ -575,7 +576,6 @@ body {
   font-size: 20px;
   line-height: 10px;
   color: #FFF200;
-  text-shadow: 0px 0.634625px 0.634625px rgba(0, 0, 0, 0.25);
 }
 .home-view > article > .price-container > article > p {
   font-family: Helvetica53-Extended;
@@ -583,7 +583,6 @@ body {
   font-size: 20px;
   line-height: 10px;
   color: #FFFFFF;
-  text-shadow: 0px 0.634625px 0.634625px rgba(0, 0, 0, 0.25);
 }
 @media only screen and (max-width: 719px) {
   .home-view > article > .price-container > article {
@@ -623,10 +622,8 @@ body {
   width: 100%;
   font-weight: 900;
   font-size: 20px;
-  line-height: 11px;
   margin-right: 16px;
   color: #FFFFFF;
-  text-shadow: 0px 0.634625px 0.634625px rgba(0, 0, 0, 0.25);
 }
 @media only screen and (max-width: 719px) {
   .home-view > article > .mint-container > section > article > header {
@@ -649,7 +646,8 @@ body {
   width: 100%;
   background: #FFF200;
   padding: 7px 14px;
-  border: none;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
 }
 @media only screen and (max-width: 719px) {
   .home-view > article > .mint-container > section > article > input {
@@ -702,7 +700,6 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: #FFF200;
-  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
   padding-right: 16px;
 }
 @media only screen and (max-width: 719px) {
@@ -717,7 +714,6 @@ body {
   font-size: 25.7023px;
   line-height: 14px;
   color: #FFF200;
-  text-shadow: 0px 0.634625px 0.634625px rgba(0, 0, 0, 0.25);
   border: 1px solid #FFF200;
   box-sizing: border-box;
   background-color: transparent;
@@ -728,7 +724,6 @@ body {
 @media only screen and (max-width: 719px) {
   .home-view > article > .mint-container > .button-wrap > button {
     align-items: center;
-    width: 25%;
     height: 100px;
     padding: 6px 15px;
   }

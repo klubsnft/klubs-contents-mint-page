@@ -45,7 +45,6 @@
             font-size      : 15.4179px;
             line-height    : 8px;
             color          : #FFF200;
-            text-shadow    : 0px 0.489228px 0.489228px rgba(0, 0, 0, 0.25);
             margin-bottom  : 20px;
 
             >.item {
@@ -70,7 +69,7 @@
             text-align    : center;
             letter-spacing: 0.03em;
             color         : #FFF200;
-            text-shadow   : 0px 0.659369px 0.659369px rgba(0, 0, 0, 0.25);
+            font-weight   : 700;
         }
 
         >h2 {
@@ -81,7 +80,6 @@
             text-align    : center;
             letter-spacing: 0.03em;
             color         : #FFFFFF;
-            text-shadow   : 0px 0.659369px 0.659369px rgba(0, 0, 0, 0.25);
 
             @media @phone {
                 margin-bottom: 24px;
@@ -101,6 +99,7 @@
         }
 
         >.price-container {
+            width: 100%;
 
             >article {
                 display   : flex;
@@ -111,7 +110,6 @@
                     font-size  : 20px;
                     line-height: 10px;
                     color      : #FFF200;
-                    text-shadow: 0px 0.634625px 0.634625px rgba(0, 0, 0, 0.25);
                 }
 
                 >p {
@@ -120,7 +118,6 @@
                     font-size  : 20px;
                     line-height: 10px;
                     color      : #FFFFFF;
-                    text-shadow: 0px 0.634625px 0.634625px rgba(0, 0, 0, 0.25);
                 }
 
                 @media @phone {
@@ -160,10 +157,8 @@
                         width       : 100%;
                         font-weight : 900;
                         font-size   : 20px;
-                        line-height : 11px;
                         margin-right: 16px;
                         color       : #FFFFFF;
-                        text-shadow : 0px 0.634625px 0.634625px rgba(0, 0, 0, 0.25);
 
                         @media @phone {
                             margin-bottom: 8px;
@@ -183,10 +178,11 @@
                     }
 
                     >input {
-                        width     : 100%;
-                        background: #FFF200;
-                        padding   : 7px 14px;
-                        border    : none;
+                        width                : 100%;
+                        background           : #FFF200;
+                        padding              : 7px 14px;
+                        -webkit-appearance   : none;
+                        -webkit-border-radius: 0;
 
                         @media @phone {
                             font-size: 14px;
@@ -240,7 +236,6 @@
                         text-align     : center;
                         letter-spacing : 0.03em;
                         color          : #FFF200;
-                        text-shadow    : 0px 1px 1px rgba(0, 0, 0, 0.25);
                         padding-right  : 16px;
 
                         @media @phone {
@@ -258,7 +253,6 @@
                     font-size       : 25.7023px;
                     line-height     : 14px;
                     color           : #FFF200;
-                    text-shadow     : 0px 0.634625px 0.634625px rgba(0, 0, 0, 0.25);
                     border          : 1px solid #FFF200;
                     box-sizing      : border-box;
                     background-color: transparent;
@@ -268,7 +262,6 @@
 
                     @media @phone {
                         align-items: center;
-                        width      : 25%;
                         height     : 100px;
                         padding    : 6px 15px;
                     }
