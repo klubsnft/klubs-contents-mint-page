@@ -27,6 +27,7 @@ export default class Confirm extends Popup {
                         },
                     }),
                 ),
+                el("img", { src: "images/shared/logo/klubs_none_text.svg" }),
             ),
         );
     }

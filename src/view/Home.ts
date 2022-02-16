@@ -2,6 +2,8 @@ import { BodyNode, DomNode, el } from "@hanul/skynode";
 import { utils } from "ethers";
 import { View, ViewParams } from "skyrouter";
 import Alert from "../component/dialogue/Alert";
+import Confirm from "../component/dialogue/Confirm";
+import Prompt from "../component/dialogue/Prompt";
 import MinterContract from "../contracts/MinterContract";
 import Klaytn from "../klaytn/Klaytn";
 import Wallet from "../klaytn/Wallet";
@@ -61,7 +63,7 @@ export default class Home implements View {
                             ),
                             el("article",
                                 el("header", "Mint Progress"),
-                                el("progress",
+                                el(".progress",
                                     this.bar = el(".progress-bar"),
                                 ),
                             ),

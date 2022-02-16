@@ -173,6 +173,7 @@
                     }
 
                     >input {
+                        font-family          : Helvetica-CondensedBlack;
                         width                : 100%;
                         background           : #FFF200;
                         padding              : 7px 14px;
@@ -184,11 +185,17 @@
                         }
                     }
 
-                    >progress {
-                        min-height      : 29px;
-                        width           : 100%;
-                        border-color    : #FFF200;
-                        background-color: black;
+                    >.progress {
+                        height    : 29px;
+                        width     : 100%;
+                        border    : 1px solid #FFF200;
+                        background: black;
+
+                        >.progress-bar {
+                            background: #FFF200;
+                            height    : 100%;
+                            width     : 100%;
+                        }
                     }
 
                     @media @phone {

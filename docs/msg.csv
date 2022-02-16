@@ -8,3 +8,5 @@ CONNECT_WALLET_DESC,클럽스 민팅은 클레이튼 블록체인과 연결이 �
 CONNECT_WALLET_BUTTON1,카이카스 설치,Install Kaikas
 CONNECT_WALLET_BUTTON2,클립으로 연결,Connect with Kakao Talk Klip
 CONNECT_WALLET_BUTTON3,연결하지 않고 둘러보기,Explore without Wallet Connection
+CONFIRM_BUTTON,Go!,Go!
+CANCEL_BUTTON,No!,No!

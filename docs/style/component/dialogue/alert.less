@@ -4,7 +4,8 @@
     justify-content: center;
     align-items    : center;
     position       : relative;
-    width          : 500px;
+    max-width      : 500px;
+    width          : 90%;
     height         : 500px;
     margin         : auto;
     padding        : 50px;
@@ -35,23 +36,22 @@
     }
 
     >.button-container {
+        width          : 100%;
         display        : flex;
-        justify-content: flex-end;
-        padding        : 16px;
+        justify-content: center;
+        padding        : 8px 0px;
 
         >button {
-            background-color: transparent;
-            color           : white;
+            font-family     : NanumBarunpen;
+            background-color: black;
+            color           : #FFF200;
             padding         : 8px 16px;
             font-size       : 0.75rem;
             border-radius   : 4px;
+            margin          : 4px;
 
             &:hover {
-                background-color: rgba(247, 222, 165, 0.5);
-            }
-
-            &:active {
-                background-color: rgba(255, 242, 0, 1);
+                background-color: rgba(0, 0, 0, 0.8);
             }
         }
     }
