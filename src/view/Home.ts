@@ -69,7 +69,7 @@ export default class Home implements View {
                             ),
                             el(".caption-container",
                                 el(".caption", "* 1트랜젝션당 10개까지 민팅이 가능합니다."),
-                                this.mintCount = el("p", "... / 10000 NFT"),
+                                this.mintCount = el("p", `... / ${this.TODAY_COUNT} NFT`),
                             ),
                         ),
                         el(".button-wrap",
