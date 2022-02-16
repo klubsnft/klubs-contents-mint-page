@@ -25,7 +25,7 @@ export default class Home implements View {
             this.container = el("section.home-view",
                 el("header",
                     el("nav",
-                        el("img", { src: "/images/shared/logo/logo.svg", alt: "klubs" }),
+                        el("img", { src: "/images/shared/logo/klubs.png", alt: "klubs" }),
                     ),
                 ),
                 el("article",
