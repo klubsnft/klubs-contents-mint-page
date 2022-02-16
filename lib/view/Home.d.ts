@@ -10,6 +10,7 @@ export default class Home implements View {
     private container;
     private interval;
     constructor();
+    private load;
     private loadBalance;
     private progress;
     changeParams(params: ViewParams, uri: string): void;

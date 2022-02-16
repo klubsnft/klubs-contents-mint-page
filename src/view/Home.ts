@@ -2,6 +2,7 @@ import { BodyNode, DomNode, el } from "@hanul/skynode";
 import { utils } from "ethers";
 import { View, ViewParams } from "skyrouter";
 import Alert from "../component/dialogue/Alert";
+import MinterContract from "../contracts/MinterContract";
 import Klaytn from "../klaytn/Klaytn";
 import Wallet from "../klaytn/Wallet";
 
@@ -43,7 +44,7 @@ export default class Home implements View {
                             this.priceDisplay = el("p", ".. KLAY"),
                         ),
                         el("article",
-                            el("header", "Your Klay balance :"),
+                            el("header", "Your Klay balance:"),
                             this.klayBalance = el("p", ".. KLAY"),
                         ),
                     ),
@@ -60,17 +61,24 @@ export default class Home implements View {
                             ),
                             el("article",
                                 el("header", "Mint Progress"),
-                                el("progress"),
+                                el("progress",
+                                    this.bar = el(".progress-bar"),
+                                ),
                             ),
                             el(".caption-container",
                                 el(".caption", "* 1트랜젝션당 10개까지 민팅이 가능합니다."),
-                                el("p", "10000 / 10000 NFT"),
+                                this.mintCount = el("p", "... / 10000 NFT"),
                             ),
                         ),
                         el(".button-wrap",
                             el("button", "Mint", {
                                 click: async () => {
-                                    new Alert("Wait!\nIt's not today.", "민팅 시작일 까지 기다려 주세요 :)");
+                                    const count = parseInt(this.countInput.domElement.value, 10);
+                                    if (count > 10) {
+                                        new Alert("오류", "한번에 최대 10개까지 민팅이 가능합니다.");
+                                    } else {
+                                        await MinterContract.mint(count);
+                                    }
                                 },
                             }),
                         ),
@@ -81,6 +89,12 @@ export default class Home implements View {
 
         Wallet.on("connect", () => this.loadBalance());
         this.interval = setInterval(() => this.progress(), 1000);
+        this.load();
+    }
+
+    private async load() {
+        const price = await MinterContract.price();
+        this.priceDisplay.empty().appendText(`${utils.formatEther(price)} KLAY`);
     }
 
     private async loadBalance() {
@@ -90,16 +104,16 @@ export default class Home implements View {
 
             const balance = await Klaytn.balanceOf(address);
             const remainder = balance.mod(1e14);
-            this.klayBalance.empty().appendText(utils.formatEther(balance.sub(remainder)));
+            this.klayBalance.empty().appendText(`${utils.formatEther(balance.sub(remainder))} KLAY`);
         }
     }
 
     private async progress() {
-
         this.loadBalance();
-
-        this.bar.style({ width: `${this.TODAY_COUNT * 100}%` });
-        this.mintCount.empty().appendText(`${0}/${this.TODAY_COUNT}`);
+        const remains = (await MinterContract.amount()).toNumber();
+        const d = 200;// this.TODAY_COUNT - remains > this.TODAY_COUNT ? this.TODAY_COUNT : this.TODAY_COUNT - remains;
+        this.bar.style({ width: `${d / this.TODAY_COUNT * 100}%` });
+        this.mintCount.empty().appendText(`${d} / ${this.TODAY_COUNT} NFT`);
     }
 
     public changeParams(params: ViewParams, uri: string): void { }
