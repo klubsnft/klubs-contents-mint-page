@@ -28,6 +28,18 @@ class Wallet extends EventContainer {
         }
     }
 
+    public async loadBalance(): Promise<BigNumber | undefined> {
+        if (ExtWallet.installed === true) {
+            return await ExtWallet.loadBalance();
+        }
+    }
+
+    public async balanceOf(address: string): Promise<BigNumber | undefined> {
+        if (ExtWallet.installed === true) {
+            return await ExtWallet.balanceOf(address);
+        }
+    }
+
     public async connected() {
         return await this.loadAddress() !== undefined;
     }
@@ -37,6 +49,23 @@ class Wallet extends EventContainer {
             return await ExtWallet.connect();
         } else {
             return new Promise<void>((resolve) => new ConnectWalletPopup(resolve));
+        }
+    }
+
+    public async addToken(
+        address: string,
+        symbol: string,
+        decimals: number,
+        image: string,
+    ) {
+        if (ExtWallet.installed === true) {
+            ExtWallet.addToken(address, symbol, decimals, image);
+        }
+    }
+
+    public async signMessage(message: string) {
+        if (ExtWallet.installed === true) {
+            return await ExtWallet.signMessage(message);
         }
     }
 }

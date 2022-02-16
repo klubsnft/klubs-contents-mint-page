@@ -1,15 +1,15 @@
 import { BodyNode, DomNode, el } from "@hanul/skynode";
-import { View, ViewParams } from "skyrouter";
 import { utils } from "ethers";
-import CommonUtil from "../CommonUtil";
+import { View, ViewParams } from "skyrouter";
+import Alert from "../component/dialogue/Alert";
 import Klaytn from "../klaytn/Klaytn";
 import Wallet from "../klaytn/Wallet";
-import Alert from "../component/dialogue/Alert";
 
 export default class Home implements View {
 
-    private TODAY_COUNT = 10000;
+    private TODAY_COUNT = 1000;
 
+    private priceDisplay: DomNode;
     private klayBalance: DomNode;
     private mintCount: DomNode;
     private walletAddress: DomNode;
@@ -30,9 +30,8 @@ export default class Home implements View {
                 ),
                 el("article",
                     el(".menu",
-                        el("a.item", "Home", { href: "", target: "_blank" }),
-                        el("a.item", "Opensea", { href: "", target: "_blank" }),
-                        el("a.item", "Officiel PFP Site", { href: "", target: "_blank" }),
+                        el("a.item", "Opensea", { href: "https://opensea.io/collection/babyping", target: "_blank" }),
+                        el("a.item", "Officiel PFP Site", { href: "https://www.babyping.net/", target: "_blank" }),
                     ),
                     el("img.logo", { src: "/images/shared/logo/babyping.png" }),
                     el("h1", "You can mint your own < Babyping > below\nGet your own NFT from and "),
@@ -41,11 +40,11 @@ export default class Home implements View {
                     el(".price-container",
                         el("article",
                             el("header", "Mint Price of 1NFT:"),
-                            el("p", "?? KLAY"),
+                            this.priceDisplay = el("p", ".. KLAY"),
                         ),
                         el("article",
                             el("header", "Your Klay balance :"),
-                            this.klayBalance = el("p", "?? KLAY"),
+                            this.klayBalance = el("p", ".. KLAY"),
                         ),
                     ),
                     el("hr"),
@@ -53,11 +52,11 @@ export default class Home implements View {
                         el("section",
                             el("article",
                                 el("header", "Wallet Address"),
-                                this.walletAddress = el("p", "xxxx")
+                                this.walletAddress = el("p", "...")
                             ),
                             el("article",
                                 el("header", "Mint Limit"),
-                                this.countInput = el("input", "xxxx")
+                                this.countInput = el("input", { value: "1" })
                             ),
                             el("article",
                                 el("header", "Mint Progress"),
@@ -87,7 +86,7 @@ export default class Home implements View {
     private async loadBalance() {
         const address = await Wallet.loadAddress();
         if (address !== undefined) {
-            this.walletAddress.empty().appendText(CommonUtil.shortenAddress(address));
+            this.walletAddress.empty().appendText(address);
 
             const balance = await Klaytn.balanceOf(address);
             const remainder = balance.mod(1e14);
