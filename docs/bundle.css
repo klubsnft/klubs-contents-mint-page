@@ -573,14 +573,12 @@ body {
 .home-view > article > .price-container > article > header {
   font-family: Helvetica53-Extended;
   font-size: 20px;
-  line-height: 10px;
   color: #FFF200;
 }
 .home-view > article > .price-container > article > p {
   font-family: Helvetica53-Extended;
   margin-left: 16px;
   font-size: 20px;
-  line-height: 10px;
   color: #FFFFFF;
 }
 @media only screen and (max-width: 719px) {
@@ -683,7 +681,6 @@ body {
   .home-view > article > .mint-container > section > .caption-container > .caption {
     margin-left: 0px;
     font-size: 14px;
-    line-height: 5px;
     margin-bottom: 32px;
   }
 }
@@ -708,7 +705,6 @@ body {
 .home-view > article > .mint-container > .button-wrap > button {
   font-weight: 900;
   font-size: 25px;
-  line-height: 14px;
   color: #FFF200;
   border: 1px solid #FFF200;
   box-sizing: border-box;
