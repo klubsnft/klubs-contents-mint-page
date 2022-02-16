@@ -2,6 +2,8 @@ import { BigNumber } from "@ethersproject/bignumber";
 import Alert from "../component/dialogue/Alert";
 import Config from "../Config";
 import ExtWallet from "../klaytn/ExtWallet";
+import Klaytn from "../klaytn/Klaytn";
+import Wallet from "../klaytn/Wallet";
 import KlubsContentsNFTMinterArtifact from "./abi/artifacts/contracts/KlubsContentsNFTMinter.sol/KlubsContentsNFTMinter.json";
 import Contract from "./Contract";
 
@@ -27,11 +29,14 @@ class MinterContract extends Contract {
             new Alert("오류", `남은 개수는 ${amount}개입니다.`);
         } else {
             const price = (await this.price()).mul(count);
-            const balance = await ExtWallet.loadBalance();
-            if (balance === undefined || balance.lt(price)) {
-                new Alert("오류", "Klay가 부족합니다.");
-            } else {
-                await this.runWalletMethodWithValue(price, "mint", count);
+            const address = await Wallet.loadAddress();
+            if (address !== undefined) {
+                const balance = await Klaytn.balanceOf(address);
+                if (balance === undefined || balance.lt(price)) {
+                    new Alert("오류", "Klay가 부족합니다.");
+                } else {
+                    await this.runWalletMethodWithValue(price, "mint", count);
+                }
             }
         }
     }
