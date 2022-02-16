@@ -21,7 +21,9 @@ class MinterContract extends Contract {
 
     public async mint(count: number): Promise<void> {
         const amount = (await this.amount()).toNumber();
-        if (count > amount) {
+        if (amount === 0) {
+            new Alert("오류", "현재 민팅 진행중이 아닙니다. 민팅은 2월 16일 밤 10시부터 시작됩니다.");
+        } else if (count > amount) {
             new Alert("오류", `남은 개수는 ${amount}개입니다.`);
         } else {
             const price = (await this.price()).mul(count);
