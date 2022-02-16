@@ -36,6 +36,7 @@ class MinterContract extends Contract {
                     new Alert("오류", "Klay가 부족합니다.");
                 } else {
                     await this.runWalletMethodWithValue(price, "mint", count);
+                    new Alert("민팅 성공!", "축하합니다! 민팅에 성공하셨습니다!");
                 }
             }
         }
