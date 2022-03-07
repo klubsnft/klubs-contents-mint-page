@@ -112,6 +112,7 @@ export default class Home implements View {
 
     private async progress() {
         this.loadBalance();
+
         const remains = (await MinterContract.amount()).toNumber();
         const d = this.TODAY_COUNT - remains > this.TODAY_COUNT ? this.TODAY_COUNT : this.TODAY_COUNT - remains;
         this.bar.style({ width: `${d / this.TODAY_COUNT * 100}%` });
