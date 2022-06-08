@@ -493,8 +493,9 @@ body {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  background-image: url("/images/shared/img/bg.png");
+  background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   width: 100%;
   min-height: 100vh;
 }
@@ -514,6 +515,19 @@ body {
     margin-left: 7px;
     margin-bottom: 60px;
   }
+}
+.home-view > .overlay {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url("/images/shared/img/yabai-goblin-bg.png") center no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+  width: 100%;
+  height: 100vh;
 }
 .home-view > article {
   display: flex;
