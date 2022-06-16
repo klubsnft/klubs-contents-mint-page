@@ -31,7 +31,7 @@ export default class Home implements View {
                 el(".overlay"),
                 el("article",
                     el(".menu",
-                        el("a.item", "Opensea", { href: "https://opensea.io/collection/yabaigoblin", target: "_blank" }),
+                        el("a.item", "Opensea", { href: "https://opensea.io/collection/yabai-goblin", target: "_blank" }),
                         // el("a.item", "Officiel PFP Site", { href: "https://www.babyping.net/", target: "_blank" }),
                     ),
                     el("img.logo", { src: "/images/shared/logo/yabaiGoblin.gif" }),
